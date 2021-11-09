@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/day_duration.png" type="image/png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Weather in your city</title>
+</head>
+
+<body>
+
+  <div id="widget">
+
+    <div id="modal">
+      <form id="locationForm">
+        <p id="locationFormPhrase">Please enter your city name</p>
+        <div class="inputBlock">
+          <input id="locationFormInput" type="text" value="" placeholder="Moscow" autocomplete="off">
+          <div id="locationAutocomplete"></div>
+        </div>
+        <br>
+        <button id="submitLocationBtn" type="submit">Check the weather</button>
+        <div id="closeModalBtn">&times;</div>
+      </form>
+      <div id="loader">
+        <div id="loaderIcon"></div>
+        <div>Loading...</div>
+      </div>
+    </div>
+
+    <div id="weatherInfo">
+
+      <div id="dateAndCityInfo">
+        <div id="time"></div>
+        <div id="city"></div>
+        <button id="changeCityBtn" type="button">Change city</button>
+      </div>
+
+      <div id="mainInfo">
+        <div>
+          <div id="weatherMain">
+            <img id="weatherIcon" src="" alt="Current weather icon">
+            <span id="temperature"></span>
+          </div>
+          <div>Feels like
+            <span id="feelsLike" class="metrics"></span>
+          </div>
+          <div id="weather"></div>
+        </div>
+        <div id="metricsInfo">
+          <div>
+            <span id="wind" class="metrics"></span>
+            <span> m/s, </span>
+            <span id="windDirection"></span>
+          </div>
+          <div>
+            <span id="humidity" class="metrics"></span>
+            <span> %</span>
+          </div>
+          <div>
+            <span id="pressure" class="metrics"></span>
+            <span> mm Hg</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="durationInfo">
+        <div id="durationStart"></div>
+        <div id="durationScale">
+          <div id="durationIcon"></div>
+          <div id="durationScaleBefore"></div>
+          <div id="durationScaleAfter"></div>
+        </div>
+        <div id="durationEnd"></div>
+      </div>
+      <div id="duration"></div>
+
+    </div>
+
+  </div>
+
+  <script src="scripts/dom_elements.js"></script>
+  <script src="scripts/get_weather.js"></script>
+
+</body>
+
+</html>
